@@ -116,7 +116,7 @@
     "@likec4/core": "workspace:*",
     "@vitejs/plugin-react": "catalog:vite",
     "boxen": "^8.0.1",
-    "playwright": "^1.52.0",
+    "playwright": "^1.55.1",
     "rollup": "catalog:vite",
     "type-fest": "catalog:utils",
     "vite": "catalog:vite"
