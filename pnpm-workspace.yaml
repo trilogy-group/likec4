@@ -23,7 +23,7 @@ catalogs:
     std-env: "^3.9.0"
     consola: "^3.4.2"
     "@hpcc-js/wasm-graphviz": "1.7.0"
-    valibot: "^1.0.0"
+    valibot: "^1.2.0"
     "@valibot/to-json-schema": "^1.0.0"
     esm-env: "^1.2.2"
     json5: "^2.2.3"
