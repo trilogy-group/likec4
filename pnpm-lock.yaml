@@ -110,8 +110,8 @@ catalogs:
       version: 8.0.1
   mcp:
     '@modelcontextprotocol/sdk':
-      specifier: ^1.10.2
-      version: 1.10.2
+      specifier: ^1.24.0
+      version: 1.24.0
   react:
     '@nanostores/react':
       specifier: 1.0.0
@@ -914,7 +914,7 @@ importers:
         version: link:../tsconfig
       '@modelcontextprotocol/sdk':
         specifier: catalog:mcp
-        version: 1.10.2
+        version: 1.24.0(zod@3.24.3)
       '@msgpack/msgpack':
         specifier: ^3.1.1
         version: 3.1.1
@@ -1425,7 +1425,7 @@ importers:
         version: link:../tsconfig
       '@modelcontextprotocol/sdk':
         specifier: catalog:mcp
-        version: 1.10.2
+        version: 1.24.0(zod@3.24.3)
       '@types/node':
         specifier: 'catalog:'
         version: 20.17.30
@@ -3032,9 +3032,15 @@ packages:
   '@mjackson/node-fetch-server@0.6.1':
     resolution: {integrity: sha512-9ZJnk/DJjt805uv5PPv11haJIW+HHf3YEEyVXv+8iLQxLD/iXA68FH220XoiTPBC4gCg5q+IMadDw8qPqlA5wg==}
 
-  '@modelcontextprotocol/sdk@1.10.2':
-    resolution: {integrity: sha512-rb6AMp2DR4SN+kc6L1ta2NCpApyA9WYNx3CrTSZvGxq9wH71bRur+zRqPfg0vQ9mjywR7qZdX2RGHOPq3ss+tA==}
+  '@modelcontextprotocol/sdk@1.24.0':
+    resolution: {integrity: sha512-D8h5KXY2vHFW8zTuxn2vuZGN0HGrQ5No6LkHwlEA9trVgNdPL3TF1dSqKA7Dny6BbBYKSW/rOBDXdC8KJAjUCg==}
     engines: {node: '>=18'}
+    peerDependencies:
+      '@cfworker/json-schema': ^4.1.1
+      zod: ^3.25 || ^4.0
+    peerDependenciesMeta:
+      '@cfworker/json-schema':
+        optional: true
 
   '@msgpack/msgpack@3.1.1':
     resolution: {integrity: sha512-DnBpqkMOUGayNVKyTLlkM6ILmU/m/+VUxGkuQlPQVAcvreLz5jn1OlQnWd8uHKL/ZSiljpM12rjRhr51VtvJUQ==}
@@ -5743,6 +5749,9 @@ packages:
   jju@1.4.0:
     resolution: {integrity: sha512-8wb9Yw966OSxApiCt0K3yNJL8pnNeIv+OEq2YMidz4FKP6nonSRoOXc80iXY4JaN2FC11B9qsNmDsm+ZOfMROA==}
 
+  jose@6.1.3:
+    resolution: {integrity: sha512-0TpaTfihd4QMNwrz/ob2Bp7X04yuxJkjRGi4aKmOqwhov54i6u79oCv7T+C7lo70MKH6BesI3vscD1yb/yzKXQ==}
+
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
@@ -6324,6 +6333,7 @@ packages:
   monaco-editor-wrapper@6.5.0:
     resolution: {integrity: sha512-pIFh4l9oiUzx9bHwKdiKG+GRU0dsVVacfhHBi9uarXBVZsmO1+KeUnl+b2GD+FFHXGYyvSipElzeE1Ur9vshLw==}
     engines: {node: '>=18.19.0', npm: '>=10.2.3'}
+    deprecated: The development of monaco-wrapper-editor will not be continued. Please use https://www.npmjs.com/package/monaco-languageclient v10+ from now on.
 
   monaco-languageclient@9.4.1:
     resolution: {integrity: sha512-qDs/5M2687+C4tk3ARt+R9wcY295iRCQc3nT5/pl9/77G3aoHf3ORhG3t0RxvbkPYp9/FWC3JiK2AoZUDsMG4Q==}
@@ -7582,6 +7592,7 @@ packages:
   sitemap@8.0.0:
     resolution: {integrity: sha512-+AbdxhM9kJsHtruUF39bwS/B0Fytw6Fr1o4ZAIAEqA6cke2xcoO2GleBw9Zw7nRzILVEgz7zBM5GiTJjie1G9A==}
     engines: {node: '>=14.0.0', npm: '>=6.0.0'}
+    deprecated: 'SECURITY: Multiple vulnerabilities fixed in 8.0.1 (XML injection, path traversal, command injection, protocol injection). Upgrade immediately: npm install sitemap@8.0.1'
     hasBin: true
 
   slash@3.0.0:
@@ -8729,6 +8740,11 @@ packages:
     resolution: {integrity: sha512-/AuWwMP+YqiPbsJx5D6TfgRTc4kTLjsh5SOcd4bLsfUg2RcEXrFMJl1DGgdHy2aCfsIA/cr/1JM0xcB2GZji8g==}
     peerDependencies:
       zod: ^3.24.1
+
+  zod-to-json-schema@3.25.0:
+    resolution: {integrity: sha512-HvWtU2UG41LALjajJrML6uQejQhNJx+JBO9IflpSja4R03iNWfKXrj6W2h7ljuLyc1nKS+9yDyL/9tD1U/yBnQ==}
+    peerDependencies:
+      zod: ^3.25 || ^4
 
   zod-to-ts@1.2.0:
     resolution: {integrity: sha512-x30XE43V+InwGpvTySRNz9kB7qFU8DlyEy7BsSTCHPH1R0QasMmHWZDCzYm6bVXtj/9NNJAZF3jW8rzFvH5OFA==}
@@ -10579,18 +10595,22 @@ snapshots:
 
   '@mjackson/node-fetch-server@0.6.1': {}
 
-  '@modelcontextprotocol/sdk@1.10.2':
+  '@modelcontextprotocol/sdk@1.24.0(zod@3.24.3)':
     dependencies:
+      ajv: 8.17.1
+      ajv-formats: 3.0.1(ajv@8.17.1)
       content-type: 1.0.5
       cors: 2.8.5
       cross-spawn: 7.0.6
       eventsource: 3.0.6
+      eventsource-parser: 3.0.1
       express: 5.1.0
       express-rate-limit: 7.5.0(express@5.1.0)
+      jose: 6.1.3
       pkce-challenge: 5.0.0
       raw-body: 3.0.0
       zod: 3.24.3
-      zod-to-json-schema: 3.24.5(zod@3.24.3)
+      zod-to-json-schema: 3.25.0(zod@3.24.3)
     transitivePeerDependencies:
       - supports-color
 
@@ -13910,6 +13930,8 @@ snapshots:
   jiti@2.4.2: {}
 
   jju@1.4.0: {}
+
+  jose@6.1.3: {}
 
   js-tokens@4.0.0: {}
 
@@ -17374,6 +17396,10 @@ snapshots:
       stacktracey: 2.1.8
 
   zod-to-json-schema@3.24.5(zod@3.24.3):
+    dependencies:
+      zod: 3.24.3
+
+  zod-to-json-schema@3.25.0(zod@3.24.3):
     dependencies:
       zod: 3.24.3
 
